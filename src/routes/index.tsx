@@ -211,14 +211,6 @@ function AuthorityStrip() {
   );
 }
 
-function SectionHeader({ index, title, sub }: { index: string; title: string; sub: string }) {
-  return (
-    <Reveal className="max-w-3xl">
-      <p className="eyebrow">/{index} — {title.split(" — ")[0]}</p>
-    </Reveal>
-  );
-}
-
 function SectionIntro({ eyebrow, title, sub }: { eyebrow: string; title: string; sub: string }) {
   return (
     <div className="max-w-3xl">
