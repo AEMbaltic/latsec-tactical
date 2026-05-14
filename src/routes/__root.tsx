@@ -72,19 +72,47 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "LAT Security — Fiziskā apsardze un monitorings Latvijā" },
+      {
+        name: "description",
+        content:
+          "Licencēti apsardzes pakalpojumi ostām, termināliem un rūpniecības objektiem. Fiziskā apsardze, 24/7 monitorings, drošības konsultācijas. Atbildam 15 minūšu laikā.",
+      },
+      { property: "og:title", content: "LAT Security — Apsardze infrastruktūrai" },
+      {
+        property: "og:description",
+        content:
+          "Fiziskā apsardze, monitorings un drošības konsultācijas Latvijas ostu, loģistikas un rūpniecības objektiem.",
+      },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { property: "og:locale", content: "lv_LV" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
+      { rel: "canonical", href: "/" },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: appCss,
+        href: "https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap",
+      },
+      { rel: "stylesheet", href: appCss },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "SecurityService",
+          name: "LAT Security",
+          description:
+            "Fiziskā apsardze, attālinātais monitorings un drošības konsultācijas Latvijas infrastruktūras objektiem.",
+          telephone: "+371 26 376 336",
+          email: "info@latsecurity.lv",
+          areaServed: "Latvia",
+          address: { "@type": "PostalAddress", addressCountry: "LV" },
+          openingHours: "Mo-Su 00:00-24:00",
+        }),
       },
     ],
   }),
