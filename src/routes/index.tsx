@@ -422,7 +422,7 @@ function Process() {
     <section id="process" className="py-32 md:py-40 border-t border-hairline">
       <div className="mx-auto max-w-7xl px-6">
         <SectionIntro
-          eyebrow="/03 — PROCESS"
+          eyebrow="/04 — PROCESS"
           title="No zvana līdz posteņa nodošanai — 72 stundas."
           sub="Standartizēts uzsākšanas process. Bez improvizācijas."
         />
@@ -461,7 +461,7 @@ function Tech() {
     <section className="py-32 md:py-40 border-t border-hairline bg-ink">
       <div className="mx-auto max-w-7xl px-6">
         <SectionIntro
-          eyebrow="/04 — TEHNOLOĢIJAS"
+          eyebrow="/05 — TEHNOLOĢIJAS"
           title="Aizsardzības sistēmas un integrācijas."
           sub="Signalizācija, piekļuves kontrole, videonovērošana. Projektēšana, uzstādīšana, apkalpošana."
         />
@@ -495,7 +495,7 @@ function License() {
     <section id="licence" className="py-32 md:py-40 border-t border-hairline">
       <div className="mx-auto max-w-7xl px-6">
         <SectionIntro
-          eyebrow="/05 — LICENCE"
+          eyebrow="/06 — LICENCE"
           title="Licencēti. Apdrošināti. Pārbaudāmi."
           sub=""
         />
@@ -591,7 +591,7 @@ function Contact() {
     <section id="kontakti" className="py-32 md:py-40 border-t border-hairline bg-ink">
       <div className="mx-auto max-w-7xl px-6">
         <SectionIntro
-          eyebrow="/06 — KONTAKTI"
+          eyebrow="/07 — KONTAKTI"
           title="Vajag apsardzi? Zvanam."
           sub="Sākotnējais zvans līdz 15 minūtēm. Audits 24-48 stundu laikā."
         />
