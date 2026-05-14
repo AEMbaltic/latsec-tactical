@@ -77,7 +77,18 @@ function Nav() {
 function Hero() {
   return (
     <section id="top" className="relative min-h-screen pt-16 overflow-hidden">
-      <div className="absolute inset-0 grid-bg" />
+      <div className="absolute inset-0">
+        <img
+          src={terminalImg}
+          alt="Industriālais termināls naktī"
+          width={1920}
+          height={1280}
+          className="w-full h-full object-cover opacity-[0.35]"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/40" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-transparent to-background" />
+      </div>
+      <div className="absolute inset-0 grid-bg opacity-60" />
       <div className="absolute inset-0 scanlines" />
       <div className="absolute inset-0 hero-vignette" />
 
