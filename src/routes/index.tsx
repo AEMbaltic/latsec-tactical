@@ -1,6 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion, useInView } from "framer-motion";
 import { useRef, type ReactNode, type FormEvent, useState } from "react";
+import terminalImg from "@/assets/terminal.jpg";
+import patrolImg from "@/assets/patrol.jpg";
+import controlRoomImg from "@/assets/control-room.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
