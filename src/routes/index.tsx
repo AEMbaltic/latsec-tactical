@@ -775,6 +775,7 @@ function Index() {
       <AuthorityStrip />
       <Services />
       <Clients />
+      <Operations />
       <Process />
       <Tech />
       <License />
