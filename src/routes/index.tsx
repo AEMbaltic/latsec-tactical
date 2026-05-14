@@ -347,6 +347,70 @@ function Clients() {
   );
 }
 
+function Operations() {
+  const frames = [
+    {
+      src: patrolImg,
+      tag: "FRAME 01 / PATRULA",
+      label: "Mobilā vienība · Ostas perimetrs",
+      meta: "03:42 LT · POSTENIS A-12",
+    },
+    {
+      src: controlRoomImg,
+      tag: "FRAME 02 / DISPEČERIJA",
+      label: "Operatīvais centrs · Reālā laika monitorings",
+      meta: "24/7 · 50+ OBJEKTI",
+    },
+  ];
+  return (
+    <section className="py-32 md:py-40 border-t border-hairline">
+      <div className="mx-auto max-w-7xl px-6">
+        <SectionIntro
+          eyebrow="/03 — OPERĀCIJAS"
+          title="Lauks. Centrs. Vienots cikls."
+          sub="Patruļas uz vietas, dispečerija aiz ekrāniem. Katrs incidents fiksēts, eskalēts, slēgts."
+        />
+
+        <div className="mt-20 grid md:grid-cols-2 gap-px bg-hairline border border-hairline">
+          {frames.map((f, i) => (
+            <Reveal key={f.tag} delay={i}>
+              <figure className="bg-background group relative overflow-hidden">
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <img
+                    src={f.src}
+                    alt={f.label}
+                    width={1600}
+                    height={1200}
+                    loading="lazy"
+                    className="w-full h-full object-cover grayscale-[0.2] transition-transform duration-[1200ms] ease-out group-hover:scale-[1.03]"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/10 to-transparent" />
+                  <div className="absolute inset-0 scanlines opacity-40" />
+                  <div className="absolute top-4 left-4 right-4 flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.18em] text-bone/80">
+                    <span className="flex items-center gap-2">
+                      <span className="size-1.5 rounded-full bg-amber pulse-dot" />
+                      REC
+                    </span>
+                    <span>{f.tag}</span>
+                  </div>
+                  <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between gap-4">
+                    <figcaption className="text-bone text-[15px] leading-tight font-medium max-w-[70%]">
+                      {f.label}
+                    </figcaption>
+                    <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-amber whitespace-nowrap">
+                      {f.meta}
+                    </span>
+                  </div>
+                </div>
+              </figure>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Process() {
   const steps = [
     ["01", "KONTAKTS", "Tālrunis vai e-pasts. Sākotnējais zvans līdz 15 minūtēm."],
